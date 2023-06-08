@@ -30,3 +30,6 @@ Les contrôleurs récupèrent les **requêtes HTTP**, elles font **le lien entre
 
 - Fichier `config.php.model` : contient les constantes de configuration de l'application (chemins, paramètres de connexion à la base de données etc ...). Il faut le renommer en `config.php` et le compléter avec vos propres paramètres.
 
+
+- Importez la DB se trouvant dans le dossier `datas` dans votre serveur local :
+  `datas/dbname-2023-06-08.sql
