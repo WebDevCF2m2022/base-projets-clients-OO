@@ -9,7 +9,7 @@ Voici la structure minimale demandée pour les projets clients en OO.
 - dossier `controllers`, autant des sous-dossiers et de contrôleurs que nécessaire, contient les contrôleurs de l'application.
     - Ces parties Contrôleur peuvent être faites en procédurale et sont appelées depuis le contrôleur frontal `public/index.php` ou depuis un autre contrôleur.
   
-Les contrôleurs récupèrent les requêtes HTTP, elles font le lien entre les données (modèles) et les vues. Elles peuvent aussi faire des redirections vers d'autres contrôleurs.
+Les contrôleurs récupèrent les **requêtes HTTP**, elles font **le lien entre les données (`models`) et les vues (`views`)**. Elles peuvent aussi faire des redirections vers d'autres contrôleurs.
 
 
 - dossier `models` : contient les classes métiers de l'application.
