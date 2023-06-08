@@ -9,7 +9,7 @@
 </head>
 <body>
 <h1>Test</h1>
-<h2>Un article</h2>
+<h2>Un article dont l'id est 1</h2>
 <?php
 echo $one->getIdTest() . "<br>";
 echo $one->getTitreTest() . "<br>";
@@ -18,6 +18,16 @@ echo $one->getDatetimeTest() . "<br>";
 echo $one->getTextTest() . "<br>";
 echo $one->getPubliTest() . "<br>";
 ?>
-
+<h2>Tous les articles</h2>
+<?php
+foreach ($all as $item) {
+    echo $item->getIdTest() . "<br>";
+    echo $item->getTitreTest() . "<br>";
+    echo $item->getSlugifyTest() . "<br>";
+    echo $item->getDatetimeTest() . "<br>";
+    echo $item->getTextTest() . "<br>";
+    echo $item->getPubliTest() . "<br><br>";
+}
+?>
 </body>
 </html>
