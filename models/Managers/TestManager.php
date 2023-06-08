@@ -1,8 +1,10 @@
 <?php
 
-namespace model\Managers;
+namespace models\Managers;
 
-use model\Interfaces\ManagersInterfaces;
+use models\Interfaces\ManagersInterfaces;
+
+use models\Mappings\TestMapping;
 use PDO;
 use Exception;
 
@@ -16,27 +18,31 @@ class TestManager implements ManagersInterfaces
         $this->connect = $connection;
     }
 
-    public function getOneById(int $id)
+    public function getOneById(int $id): ?TestMapping
     {
-        $this->connect->prepare("SELECT * FROM test WHERE `idTest` = :id");
-        $this->connect->bindValue(":id", $id, PDO::PARAM_INT);
+        $prepare = $this->connect->prepare("SELECT * FROM test WHERE `idTest` = :id");
+        $prepare->bindValue(":id", $id, PDO::PARAM_INT);
         try {
-            $this->connect->execute();
-            $result = $this->connect->fetch();
-            return $result;
+            $prepare->execute();
+            $result = $prepare->fetch();
+            return new TestMapping($result);
         } catch (Exception $e) {
             echo "Erreur de requête : " . $e->getMessage();
             exit;
         }
     }
 
-    public function getAll()
+    public function getAll(): ?array
     {
-        $this->connect->prepare("SELECT * FROM test");
+        $prepare = $this->connect->prepare("SELECT * FROM test");
         try {
-            $this->connect->execute();
-            $result = $this->connect->fetchAll();
-            return $result;
+            $prepare->execute();
+            $result = $prepare->fetchAll();
+            $all = [];
+            foreach ($result as $row) {
+                $all[] = new TestMapping($row);
+            }
+            return $all;
         } catch (Exception $e) {
             echo "Erreur de requête : " . $e->getMessage();
             exit;

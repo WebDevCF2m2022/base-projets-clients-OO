@@ -1,9 +1,9 @@
 <?php
 
-namespace model\Mappings;
+namespace models\Mappings;
 
 // Les models de type Mapping héritent de la classe AbstractMapping
-use model\Abstracts\AbstractMapping;
+use models\Abstracts\AbstractMapping;
 
 class TestMapping extends AbstractMapping
 {

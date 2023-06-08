@@ -3,7 +3,7 @@
  * Tous les models de type Mapping héritent de cette classe
  *
  */
-namespace model\Abstracts;
+namespace models\Abstracts;
 
 abstract class AbstractMapping
 {

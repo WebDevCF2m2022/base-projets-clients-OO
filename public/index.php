@@ -24,3 +24,6 @@ try {
     echo "Erreur de connexion à la base de données : " . $e->getMessage();
     exit;
 }
+
+// choix du controller
+require_once "../controllers/testController.php";

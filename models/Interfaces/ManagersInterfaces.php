@@ -1,6 +1,6 @@
 <?php
 
-namespace model\Interfaces;
+namespace models\Interfaces;
 
 use PDO;
 use Exception;
