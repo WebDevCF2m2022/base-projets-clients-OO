@@ -13,8 +13,8 @@ Les contrôleurs récupèrent les **requêtes HTTP**, elles font **le lien entre
 
 
 - dossier `models` : contient les classes métiers de l'application.
-  - sous-dossier `Mappings` : contient les classes de mapping de nos tables SQL de l'application.
-  - sous-dossier `Managers` : contient les classes de gestion de nos tables SQL de l'application.
+  - sous-dossier `Mappings` : contient les classes de mapping de nos tables SQL de l'application. Elles doivent toutes hériter de la classe abstraite `models/Abstracts/AbstractMapping.php`.
+  - sous-dossier `Managers` : contient les classes de gestion de nos tables SQL de l'application. Elles doivent toutes utiliser l'interface `models/Interfaces/ManagerInterface.php`.
   - sous-Dossier `Abstracts` : contient les classes abstraites de l'application.
   - sous-Dossier `Interfaces` : contient les interfaces de l'application.
   - sous-Dossier `traits` : contient les traits de l'application.
