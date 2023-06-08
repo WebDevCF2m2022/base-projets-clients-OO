@@ -13,11 +13,11 @@ Les contrôleurs récupèrent les **requêtes HTTP**, elles font **le lien entre
 
 
 - dossier `models` : contient les classes métiers de l'application.
-  - sous-dossier `Mapping` : contient les classes de mapping de nos tables SQL de l'application.
-  - sous-dossier `Manager` : contient les classes de gestion de nos tables SQL de l'application.
-  - sous-Dossier `Abstract` : contient les classes abstraites de l'application.
+  - sous-dossier `Mappings` : contient les classes de mapping de nos tables SQL de l'application.
+  - sous-dossier `Managers` : contient les classes de gestion de nos tables SQL de l'application.
+  - sous-Dossier `Abstracts` : contient les classes abstraites de l'application.
   - sous-Dossier `Interfaces` : contient les interfaces de l'application.
-  - sous-Dossier `trait` : contient les traits de l'application.
+  - sous-Dossier `traits` : contient les traits de l'application.
 - dossier `views`
 - dossier `public` : contient les fichiers accessibles depuis le navigateur (css, js, images, fichiers statiques etc ...) et surtout le contrôleur frontal `index.php` qui redirige les requêtes vers les contrôleurs.
 
