@@ -18,10 +18,10 @@ Les contrôleurs récupèrent les **requêtes HTTP**, elles font **le lien entre
   - sous-Dossier `Abstracts` : contient les classes abstraites de l'application.
   - sous-Dossier `Interfaces` : contient les interfaces de l'application.
   - sous-Dossier `traits` : contient les traits de l'application.
-- dossier `views`
+- dossier `views` : contient les templates.
 - dossier `public` : contient les fichiers accessibles depuis le navigateur (css, js, images, fichiers statiques etc ...) et surtout le contrôleur frontal `index.php` qui redirige les requêtes vers les contrôleurs.
 
 - Fichier `.gitignore` : pour ignorer les fichiers de configuration de votre IDE, les fichiers de logs, les fichiers de cache, les bibliothèqes ou composants externes etc ...
 
-- Fichier `config.php.bak` : contient les constantes de configuration de l'application (chemins, paramètres de connexion à la base de données etc ...). Il faut le renommer en `config.php` et le compléter avec vos propres paramètres.
+- Fichier `config.php.model` : contient les constantes de configuration de l'application (chemins, paramètres de connexion à la base de données etc ...). Il faut le renommer en `config.php` et le compléter avec vos propres paramètres.
 
