@@ -5,6 +5,8 @@ namespace models\Mappings;
 // Les models de type Mapping héritent de la classe AbstractMapping
 use models\Abstracts\AbstractMapping;
 
+
+
 class TestMapping extends AbstractMapping
 {
     // Déclaration des propriétés
@@ -13,7 +15,9 @@ class TestMapping extends AbstractMapping
     private string $slugifyTest;
     private string $datetimeTest;
     private string $textTest;
-    private bool $publiTest;
+    private bool $publiTest = false;
+
+
 
     // Déclaration des getters
     public function getIdTest(): int

@@ -27,7 +27,15 @@ foreach ($all as $item) {
     echo $item->getDatetimeTest() . "<br>";
     echo $item->getTextTest() . "<br>";
     echo $item->getPubliTest() . "<br><br>";
+
 }
 ?>
+<h2>Insertion d'un test</h2>
+<form action="" method="post" name="newTest">
+    <input type="text" name="titreTest" required placeholder="titre"><br>
+    <input type="datetime-local" name="datetimeTest" required placeholder="date"><br>
+    <textarea name="textTest" required placeholder="texte"></textarea><br>
+    <input type="submit" value="Envoyer">
+</form>
 </body>
 </html>
