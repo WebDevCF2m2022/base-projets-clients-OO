@@ -3,7 +3,9 @@
 
 Voici la structure minimale demandée pour les projets clients en OO.
 
-- Dossier `datas` : contient les fichiers de données (csv, json, xml, SQL, maquettes etc ...) qui peuvent être partagés entre les membres de l'équipe.
+- Dossier `datas` : contient les fichiers de données (csv, json, xml, SQL, maquettes etc...) qui peuvent être partagés entre les membres de l'équipe. Comme ce dossier est public et partagé sur github, il ne faut pas y mettre de fichiers sensibles (mots de passe non cryptés, clés d'API etc ...). Les données du localhost sont généralement peu voir non critiques, mais les données du serveur de production doivent être protégées.
+
+
 - dossier `controllers`, autant des sous-dossiers et de contrôleurs que nécessaire, contient les contrôleurs de l'application.
     - Autant de dossiers et fichires que nécessaires
 
