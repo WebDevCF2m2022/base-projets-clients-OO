@@ -17,6 +17,8 @@ class TestMapping extends AbstractMapping
     private string $textTest;
     private bool $publiTest = false;
 
+    private ?int $idUser;
+
 
 
     // Déclaration des getters
@@ -50,6 +52,11 @@ class TestMapping extends AbstractMapping
         return $this->publiTest;
     }
 
+    public function getIdUser(): ?int
+    {
+        return $this->idUser;
+    }
+
     // Déclaration des setters
 
     public function setIdTest(int $idTest): void
@@ -80,6 +87,11 @@ class TestMapping extends AbstractMapping
     public function setPubliTest(bool $publiTest): void
     {
         $this->publiTest = $publiTest;
+    }
+
+    public function setIdUser(?int $idUser): void
+    {
+        $this->idUser = $idUser;
     }
 
 }

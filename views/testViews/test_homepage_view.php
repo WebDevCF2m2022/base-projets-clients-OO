@@ -9,6 +9,12 @@
 </head>
 <body>
 <h1>Test</h1>
+<nav>
+    <ul>
+        <li><a href=".">test</a></li>
+        <li><a href="?user">user</a> </li>
+    </ul>
+</nav>
 <h2>Un article dont l'id est 1</h2>
 <?php
 echo $one->getIdTest() . "<br>";
@@ -17,6 +23,7 @@ echo $one->getSlugifyTest() . "<br>";
 echo $one->getDatetimeTest() . "<br>";
 echo $one->getTextTest() . "<br>";
 echo $one->getPubliTest() . "<br>";
+echo $one->getIdUser() . "<br>";
 ?>
 <h2>Tous les articles</h2>
 <?php
@@ -26,7 +33,9 @@ foreach ($all as $item) {
     echo $item->getSlugifyTest() . "<br>";
     echo $item->getDatetimeTest() . "<br>";
     echo $item->getTextTest() . "<br>";
-    echo $item->getPubliTest() . "<br><br>";
+    echo $item->getPubliTest() . "<br>";
+    echo $item->getIdUser() . "<br><br>";
+
 
 }
 ?>

@@ -59,6 +59,7 @@ class TestManager implements ManagersInterfaces
     {
         $slugify = $this->slugify($datas->getTitreTest());
         $datetime = date("Y-m-d H:i:s", strtotime($datas->getDatetimeTest()));
+
         $prepare = $this->connect->prepare("INSERT INTO test (`titreTest`, `slugifyTest`, `datetimeTest`, `textTest`) VALUES (:titreTest, :slugifyTest, :datetimeTest, :textTest)");
         $prepare->bindValue(":titreTest", $datas->getTitreTest(), PDO::PARAM_STR);
         $prepare->bindValue(":slugifyTest", $slugify, PDO::PARAM_STR);

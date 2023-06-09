@@ -26,4 +26,8 @@ try {
 }
 
 // choix du controller
-require_once "../controllers/testController.php";
+if(isset($_SESSION['sessionid']) && $_SESSION['sessionid'] == session_id()){
+    require_once "../controllers/privateController.php";
+}else{
+    require_once "../controllers/testController.php";
+}
