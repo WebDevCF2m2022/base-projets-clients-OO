@@ -4,3 +4,6 @@
 # Configuration
 config.php
 
+# Bibliothèques
+vendor/
+

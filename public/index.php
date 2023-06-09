@@ -9,6 +9,9 @@ spl_autoload_register(function ($class) {
     require '../' .$class . '.php';
 });
 
+// autoload classes from composer
+require_once "../vendor/autoload.php";
+
 // db connection
 try {
     $pdo = new PDO(
