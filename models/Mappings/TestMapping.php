@@ -81,6 +81,7 @@ class TestMapping extends AbstractMapping
 
     public function setTextTest(string $textTest): void
     {
+
         $this->textTest = $textTest;
     }
 
