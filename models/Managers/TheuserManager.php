@@ -18,7 +18,7 @@ class TheuserManager implements ManagersInterfaces, SecurityInterfaces
         $this->connect = $connection;
     }
 
-    public function getOneById(int $id)
+    public function getOneById(int $id) : ?TheuserMapping
     {
         $prepare = $this->connect->prepare("SELECT * FROM theuser WHERE `idUser` = :id");
         $prepare->bindValue(":id", $id, PDO::PARAM_INT);
@@ -32,7 +32,7 @@ class TheuserManager implements ManagersInterfaces, SecurityInterfaces
         }
     }
 
-    public function getAll()
+    public function getAll(): array
     {
         $prepare = $this->connect->prepare("SELECT * FROM theuser");
         try{
@@ -49,7 +49,7 @@ class TheuserManager implements ManagersInterfaces, SecurityInterfaces
         }
     }
 
-    public function getUserByLogin(string $login){
+    public function getUserByLogin(string $login): ?TheuserMapping{
         $prepare = $this->connect->prepare("SELECT * FROM theuser WHERE `loginUser` = :login");
         $prepare->bindValue(":login", $login, PDO::PARAM_STR);
         try{
